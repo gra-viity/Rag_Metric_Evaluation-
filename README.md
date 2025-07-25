@@ -15,7 +15,7 @@ This project provides a pipeline for evaluating Retrieval-Augmented Generation (
 - Packages: `numpy`, `langchain-aws`, `ragas`, `ragas[llm]`, `ragas[embeddings]`
 
 ## Usage
-1. Configure your AWS credentials and region in the `config` dictionary at the top of `metricEval.py`.
+1. Configure your AWS credentials(in your system) and region in the `config` dictionary at the top of `metricEval.py`.
 2. (Optional) Replace the sample documents, queries, and expected responses with your own data.
 3. Run the script:
 
