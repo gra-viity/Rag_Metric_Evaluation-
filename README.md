@@ -15,13 +15,30 @@ This project provides a pipeline for evaluating Retrieval-Augmented Generation (
 - Packages: `numpy`, `langchain-aws`, `ragas`, `ragas[llm]`, `ragas[embeddings]`
 
 ## Usage
-1. Configure your AWS credentials(in your system) and region in the `config` dictionary at the top of `metricEval.py`.
-2. (Optional) Replace the sample documents, queries, and expected responses with your own data.
-3. Run the script:
+1. Create and activate a Python virtual environment (recommended):
 
-```bash
-python metricEval.py
-```
+   ```bash
+   python -m venv .venv
+   # On Windows:
+   .venv\Scripts\activate
+   # On macOS/Linux:
+   source .venv/bin/activate
+   ```
+
+2. Install the required libraries:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Configure your AWS credentials and region in the `config` dictionary at the top of `metricEval.py`.
+4. (Optional) Replace the sample documents, queries, and expected responses with your own data.
+5. Run the script:
+
+   ```bash
+   python metricEval.py
+   ```
+
 
 ## How It Works
 - **RAG Class**: Handles document embedding, retrieval, and answer generation using Bedrock LLMs and embeddings.
