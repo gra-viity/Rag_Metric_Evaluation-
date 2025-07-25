@@ -10,7 +10,7 @@ from ragas.embeddings import LangchainEmbeddingsWrapper
 config = {
     "credentials_profile_name": "default",  # E.g "default"
     "region_name": "us-east-2",  # E.g. "us-east-1"
-    "llm": "us.anthropic.claude-3-haiku-20240307-v1:0",  # E.g "anthropic.claude-3-5-sonnet-20241022-v2:0"
+    "llm": "us.anthropic.claude-3-haiku-20240307-v1:0",  # E.g "anthropic.claude-3-5-sonnet-20241022-v2:0" ----(Inference profile ID)(https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/inference-profiles)
     "embeddings": "amazon.titan-embed-text-v2:0",  # E.g "amazon.titan-embed-text-v2:0"
     "temperature": 0.4,
 }
