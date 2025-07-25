@@ -36,6 +36,22 @@ python metricEval.py
 - Prints each query, the generated answer, and the LLM used.
 - Prints the Ragas evaluation results at the end.
 
+### Understanding the Metrics
+When you run the script, you will see output like:
+
+```
+{'context_recall': 0.9286, 'faithfulness': 1.0000, 'factual_correctness(mode=f1)': 0.6993}
+```
+
+These metrics are defined as follows:
+
+- **context_recall**: Measures how much of the relevant information from the retrieved context was used in the generated answer. A value close to 1 means the answer covers most of the important context.
+- **faithfulness**: Indicates whether the answer is strictly based on the retrieved context, without introducing unsupported information. A value of 1.0 means the answer is fully faithful to the context.
+- **factual_correctness (mode=f1)**: Evaluates the factual accuracy of the answer compared to the reference answer, using the F1 score (harmonic mean of precision and recall). A higher value means the answer is more factually correct.
+
+These metrics help you assess the quality of your RAG system in terms of using context, staying faithful to the source, and providing factually correct answers.
+
+
 ## References
 - [AWS Bedrock](https://aws.amazon.com/bedrock/)
 - [LangChain AWS](https://github.com/langchain-ai/langchain-aws)
